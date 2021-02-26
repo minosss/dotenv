@@ -1,4 +1,3 @@
 .npmignore
-yarn.lock
 tests/
 .editorconfig

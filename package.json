@@ -4,6 +4,7 @@
 	"version": "0.1.0",
 	"author": "Mino Zang",
 	"main": "index.js",
+	"files": ["index.js"],
 	"dependencies": {
 		"dotenv": "^8.2.0",
 		"dotenv-expand": "^5.1.0"

@@ -13,10 +13,13 @@ function loadEnvFiles(options) {
 	let config = {};
 	for (const file of files) {
 		if (fs.existsSync(file)) {
+			console.log(file);
 			config = Object.assign(config, dotenv.parse(fs.readFileSync(file)));
-			config = dotenvExpand({parsed: config}).parsed || config;
 		}
 	}
+
+	config = dotenvExpand({parsed: config}).parsed || config;
+
 	return config;
 }
 
@@ -31,6 +34,7 @@ function config(options = {}) {
 	if (!opts.filePath) {
 		opts.filePath = [
 			'.env',
+			'.env.local',
 			`.env.${process.env.NODE_ENV || 'development'}`,
 			`.env.${process.env.NODE_ENV || 'development'}.local`,
 		];
