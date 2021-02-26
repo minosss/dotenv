@@ -11,5 +11,8 @@
 	"devDependencies": {
 		"@yme/prettier-config": "^0.1.0"
 	},
+	"publishConfig": {
+        "access": "public"
+    },
 	"license": "BSD-2-Clause"
 }
