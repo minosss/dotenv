@@ -1,7 +1,7 @@
 {
 	"name": "@yme/dotenv",
 	"description": "n/a",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"author": "Mino Zang",
 	"main": "index.js",
 	"dependencies": {
@@ -12,7 +12,7 @@
 		"@yme/prettier-config": "^0.1.0"
 	},
 	"publishConfig": {
-        "access": "public"
-    },
+		"access": "public"
+	},
 	"license": "BSD-2-Clause"
 }
