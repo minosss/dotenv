@@ -1,0 +1,15 @@
+{
+	"name": "@yme/dotenv",
+	"description": "n/a",
+	"version": "0.0.0",
+	"author": "Mino Zang",
+	"main": "index.js",
+	"dependencies": {
+		"dotenv": "^8.2.0",
+		"dotenv-expand": "^5.1.0"
+	},
+	"devDependencies": {
+		"@yme/prettier-config": "^0.1.0"
+	},
+	"license": "BSD-2-Clause"
+}
