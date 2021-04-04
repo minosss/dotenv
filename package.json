@@ -1,7 +1,7 @@
 {
 	"name": "@yme/dotenv",
 	"description": "n/a",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"author": "Mino Zang",
 	"main": "index.js",
 	"files": [
