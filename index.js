@@ -6,15 +6,24 @@ const dotenv = require('dotenv');
 const dotenvExpand = require('dotenv-expand');
 
 function loadEnvFiles(options) {
-	const files = Array.isArray(options.filePath)
-		? options.filePath
-		: [options.filePath || path.resolve(process.cwd(), '.env')];
+	let encoding = 'utf8';
+	let debug = false;
+	const files = Array.isArray(options.path)
+		? options.path
+		: [options.path || path.resolve(process.cwd(), '.env')];
+
+	if (options.encoding != null) {
+		encoding = options.encoding;
+	}
+
+	if (options.debug != null) {
+		debug = options.debug;
+	}
 
 	let config = {};
 	for (const file of files) {
 		if (fs.existsSync(file)) {
-			console.log(file);
-			config = Object.assign(config, dotenv.parse(fs.readFileSync(file)));
+			config = Object.assign(config, dotenv.parse(fs.readFileSync(file, {encoding}), {debug}));
 		}
 	}
 
@@ -31,14 +40,17 @@ function config(options = {}) {
 		options
 	);
 
-	if (!opts.filePath) {
-		opts.filePath = [
+	if (!opts.path) {
+		opts.path = [
 			'.env',
 			'.env.local',
 			`.env.${process.env.NODE_ENV || 'development'}`,
 			`.env.${process.env.NODE_ENV || 'development'}.local`,
 		];
+	} else {
+		opts.path = opts.path.split(',');
 	}
+
 	let config = loadEnvFiles(opts);
 
 	if (opts.ignoreVars) {

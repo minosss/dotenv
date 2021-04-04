@@ -5,7 +5,8 @@
 	"author": "Mino Zang",
 	"main": "index.js",
 	"files": [
-		"index.js"
+		"index.js",
+		"config.js"
 	],
 	"dependencies": {
 		"dotenv": "^8.2.0",
