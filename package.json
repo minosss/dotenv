@@ -1,14 +1,19 @@
 {
 	"name": "@yme/dotenv",
 	"description": "n/a",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"author": "Mino Zang",
 	"main": "index.js",
+	"bin": {
+		"dotenv": "cli.js"
+	},
 	"files": [
+		"cli.js",
 		"index.js",
 		"config.js"
 	],
 	"dependencies": {
+		"cross-env": "^7.0.3",
 		"dotenv": "^8.2.0",
 		"dotenv-expand": "^5.1.0"
 	},
