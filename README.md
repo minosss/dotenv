@@ -1,5 +1,7 @@
 # @yme/dotenv
 
+[![npm](https://img.shields.io/npm/v/@yme/dotenv.svg)](https://www.npmjs.com/package/@yme/dotenv)
+
 `dotenv` + `dotenv-expand` and load multiple env files
 
 ```
@@ -10,6 +12,22 @@ assign(
 .env.{NODE_ENV}.local
 )
 ```
+
+## install
+
+npm
+
+```sh
+npm i @yme/dotenv
+```
+
+yarn
+
+```sh
+yarn add @yme/dotenv
+```
+
+## usage
 
 node
 
