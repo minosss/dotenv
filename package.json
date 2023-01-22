@@ -1,8 +1,8 @@
 {
 	"name": "@yme/dotenv",
-	"description": "n/a",
+	"description": "cross env with env file",
 	"version": "0.3.1",
-	"author": "Mino Zang",
+	"author": "mino",
 	"main": "index.js",
 	"bin": {
 		"dotenv": "cli.js"
@@ -18,10 +18,11 @@
 		"dotenv-expand": "^5.1.0"
 	},
 	"devDependencies": {
-		"@yme/prettier-config": "^0.1.0"
+		"@yme/prettier-config": "^0.1.0",
+		"prettier": "^2.8.3"
 	},
 	"publishConfig": {
 		"access": "public"
 	},
-	"license": "BSD-2-Clause"
+	"license": "MIT"
 }
