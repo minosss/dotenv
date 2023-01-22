@@ -1,7 +1,7 @@
 {
 	"name": "@yme/dotenv",
 	"description": "cross env with env file",
-	"version": "0.3.1",
+	"version": "0.4.0",
 	"author": "mino",
 	"main": "index.js",
 	"bin": {
